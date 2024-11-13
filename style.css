@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 30%);
+}
+
+#calculator {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 15px;
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.display-container {
+  position: relative; /* Positioning for absolute children */
+}
+
+#display {
+  width: 100%; /* Adjust width to account for buttons */
+  padding: 20px;
+  font-size: 5rem;
+  text-align: left;
+  border: none;
+  background-color: hsl(0, 0%, 20%);
+  color: #fff;
+  inline-size: 460px;
+}
+
+#copyButton {
+  position: absolute; /* Positioning absolute within .display-container */
+  top: 20px; /* Adjust as needed */
+  right: 0px; /* Position copy button */
+  background-color: transparent; /* Make background transparent */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: hsl(35, 100%, 55%); /* Icon color */
+  font-size: 1.5rem; /* Adjust icon size */
+  visibility: hidden;
+}
+
+.display-container:hover #copyButton {
+  visibility: visible; /* Show button on hover over display container */
+}
+
+.display-container:hover #copy-label {
+  visibility: visible; /* Show label on hover over parent container */
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 25px;
+}
+
+button {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  border: none;
+  background-color: hsl(0, 0%, 30%);
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 40%);
+}
+
+.operator-btn {
+  background-color: hsl(35, 100%, 55%);
+}
+
+.operator-btn:hover {
+  background-color: hsl(35, 100%, 65%);
+}
+.backspace-operator-btn {
+  font: 1.5rem;
+  background-color: hsl(35, 100%, 55%);
+}
